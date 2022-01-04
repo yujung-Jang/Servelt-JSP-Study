@@ -56,6 +56,8 @@ public class Calc2 extends HttpServlet {
 		else {
 			Cookie valueCookie = new Cookie("value", String.valueOf(v)); // 쿠키는 문자열만 가능
 			Cookie opCookie = new Cookie("op", op);
+			valueCookie.setPath("/calc2"); // 쿠키가 전달되는 경로(URL)의 조건
+			opCookie.setPath("/calc2");
 			response.addCookie(valueCookie);
 			response.addCookie(opCookie);
 		}
