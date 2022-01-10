@@ -52,6 +52,8 @@ public class Calc3 extends HttpServlet {
 		Cookie expCookie = new Cookie("exp", exp);
 		if(operator != null && operator.equals("C"))
 			expCookie.setMaxAge(0); // 쿠키 소멸
+		
+		expCookie.setPath("/"); // 쿠키가 전달되는 경로(URL)의 조건
 		response.addCookie(expCookie);
 		response.sendRedirect("calcpage"); // 경로가 같아서 필요 없기 때문에 '/' 생략 가능
 	}
