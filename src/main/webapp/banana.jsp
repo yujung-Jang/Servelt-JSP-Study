@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <%
 
 String cnt_ = request.getParameter("cnt");
@@ -16,7 +16,7 @@ if(cnt_ != null && !cnt_.equals(""))
 </head>
 <body>
 	<%for(int i=0; i<cnt; i++){ %>
-	 ¾È³ç Servlet!!<br >
+	 ì•ˆë…• Servlet!!<br >
 	<%} %>
 </body>
 </html>
