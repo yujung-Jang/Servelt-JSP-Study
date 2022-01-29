@@ -8,13 +8,15 @@
 <title>Insert title here</title>
 </head>
 <%
-pageContext.setAttribute("aa", "hello");
+pageContext.setAttribute("result", "hello");
 %>
 <body>
 	<%=request.getAttribute("result") %>입니다.
-	${result}<br >
+	${requestScope.result}<br >
 	${names[0]}<br >
-	${notice.title} <br >
-	${aa}
+	${notice.title}<br >
+	${result}<br >
+	${param.n}<br >
+	${header.accept}
 </body>
 </html>
